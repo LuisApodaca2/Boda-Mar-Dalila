@@ -693,6 +693,58 @@ footer::before {
 }
 .music-btn:active { transform: scale(0.96); }
 
+/* Pulse ring to draw attention */
+.music-btn::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(92, 74, 48, 0.4);
+  animation: musicPulse 2s ease-out infinite;
+}
+@keyframes musicPulse {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  100% { transform: scale(1.7); opacity: 0; }
+}
+
+.music-tooltip {
+  position: absolute;
+  right: calc(100% + 10px);
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(92, 74, 48, 0.88);
+  color: #F5F0E4;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  padding: 7px 14px;
+  border-radius: 100px;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  /* Show on load, hide after first click */
+  opacity: 1;
+  transition: opacity 0.4s ease;
+}
+/* Arrow pointing right toward button */
+.music-tooltip::after {
+  content: '';
+  position: absolute;
+  right: -5px;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-right: none;
+  border-left-color: rgba(92, 74, 48, 0.88);
+}
+.music-tooltip.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
 /* ── SCROLL PROGRESS ─────────────────────────────────────── */
 .progress-bar {
   position: fixed;

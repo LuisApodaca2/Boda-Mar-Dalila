@@ -14,54 +14,39 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// ── MUSIC AUTOPLAY ──────────────────────────────────────────
-const audio    = document.getElementById('bgAudio');
-const btn      = document.getElementById('musicBtn');
-const iconPlay = document.getElementById('iconPlay');
-const iconPause= document.getElementById('iconPause');
-let started    = false;
+// ── MUSIC ───────────────────────────────────────────────────
+const audio     = document.getElementById('bgAudio');
+const btn       = document.getElementById('musicBtn');
+const iconPlay  = document.getElementById('iconPlay');
+const iconPause = document.getElementById('iconPause');
+const tooltip   = btn.querySelector('.music-tooltip');
+let started     = false;
 
 function setPlaying(playing) {
   iconPlay.style.display  = playing ? 'none'  : 'block';
   iconPause.style.display = playing ? 'block' : 'none';
 }
 
-function startAudio() {
-  if (started) return;
-  started = true;
-  audio.volume = 0;
-  audio.play().then(() => {
-    // Fade in over 2 seconds
-    let v = 0;
-    const fade = setInterval(() => {
-      v = Math.min(v + 0.04, 0.75);
-      audio.volume = v;
-      if (v >= 0.75) clearInterval(fade);
-    }, 80);
-    setPlaying(true);
-  }).catch(() => {
-    // Autoplay still blocked — wait for explicit tap
-    started = false;
-  });
-}
+btn.addEventListener('click', () => {
+  // Hide tooltip permanently on first interaction
+  tooltip.classList.add('hidden');
 
-// Trigger on first touch or click
-['touchstart', 'click', 'keydown'].forEach(evt =>
-  document.addEventListener(evt, startAudio, { once: true, passive: true })
-);
-
-// Also trigger when user has scrolled (iOS: scroll = user already touched)
-window.addEventListener('scroll', () => {
-  if (!started && window.scrollY > 10) startAudio();
-}, { passive: true });
-
-// Manual toggle
-btn.addEventListener('click', (e) => {
-  e.stopPropagation(); // don't re-trigger startAudio
   if (!started) {
-    startAudio();
+    audio.volume = 0;
+    audio.play().then(() => {
+      started = true;
+      setPlaying(true);
+      // Fade in
+      let v = 0;
+      const fade = setInterval(() => {
+        v = Math.min(v + 0.04, 0.75);
+        audio.volume = v;
+        if (v >= 0.75) clearInterval(fade);
+      }, 80);
+    });
     return;
   }
+
   if (audio.paused) {
     audio.play();
     setPlaying(true);
