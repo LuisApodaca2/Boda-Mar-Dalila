@@ -57,12 +57,15 @@ body {
   content: '';
   position: absolute;
   inset: 0;
-  /* Rings image centered, zoomed so rings sit behind/below the names */
+  /* Rings are at ~60% x, ~72% y of the original image.
+     We zoom in (150%) and shift the focal point to put them
+     behind/below the h1 text (roughly vertical center of hero) */
   background-image: url('images/anillos.png');
   background-repeat: no-repeat;
-  background-size: 85%;
-  background-position: center 62%;
-  opacity: 0.28;
+  background-size: 150%;
+  background-position: 62% 48%;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
 }
 
 .hero::after {
