@@ -11,6 +11,17 @@
 </head>
 <body>
 
+<!-- Audio -->
+<audio id="bgAudio" loop preload="auto">
+  <source src="audio/cancion.mp3" type="audio/mpeg">
+</audio>
+
+<!-- Music toggle -->
+<button class="music-btn" id="musicBtn" aria-label="Reproducir música">
+  <svg id="iconPlay" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+  <svg id="iconPause" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+</button>
+
 <!-- Scroll progress bar -->
 <div class="progress-bar" id="progressBar"></div>
 
@@ -128,8 +139,8 @@
     <div class="hero-divider"><span>✦</span></div>
     <h1>Mar &amp; Dalila</h1>
     <div class="date-badge">
-      <span class="date">📅&nbsp; 01 de Agosto de 2026</span>
-      <span class="time">🕘&nbsp; 09:00 PM — 02:00 AM</span>
+      <span class="date">01 de Agosto de 2026</span>
+      <span class="time">09:00 PM — 02:00 AM</span>
     </div>
     <p class="hero-quote">
       &ldquo;No llegó como lo imaginé, llegó mejor: siendo ella. Entre sus manos encontré refugio, en su mirada descubrí complicidad y en su amor hallé todo aquello que, durante tanto tiempo, había esperado sin saber que tendría su nombre.&rdquo;
@@ -157,22 +168,6 @@
       </div>
       <p class="countdown-sub">para nuestro gran día</p>
     </div>
-  </article>
-
-  <!-- Song -->
-  <article class="card song-card">
-    <span class="section-label">Nuestra Canción</span>
-    <h2>La música que nos une</h2>
-    <div class="song-player">
-      <div class="song-disc" id="disc"></div>
-      <div class="song-info">
-        <span class="song-title">Contigo Quiero</span>
-        <span class="song-artist">Reyli Barba</span>
-      </div>
-    </div>
-    <a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=Contigo+Quiero+Reyli+Barba" onclick="document.getElementById('disc').classList.add('playing')">
-      ▶ &nbsp;Escuchar canción
-    </a>
   </article>
 
   <!-- Location -->

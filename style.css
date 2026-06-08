@@ -665,6 +665,34 @@ footer::before {
   100% { transform: translateY(110vh) rotate(720deg); opacity: 0; }
 }
 
+/* ── MUSIC BUTTON ────────────────────────────────────────── */
+.music-btn {
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 200;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(92, 74, 48, 0.55);
+  background: rgba(92, 74, 48, 0.72);
+  color: #F5F0E4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: background 0.2s, transform 0.2s;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+  padding: 0;
+}
+.music-btn:hover {
+  background: rgba(92, 74, 48, 0.92);
+  transform: scale(1.08);
+}
+.music-btn:active { transform: scale(0.96); }
+
 /* ── SCROLL PROGRESS ─────────────────────────────────────── */
 .progress-bar {
   position: fixed;
