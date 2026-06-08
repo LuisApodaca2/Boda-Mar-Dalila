@@ -1,18 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap');
 
 :root {
-  --bg: #F5F0E4;
-  --bg2: #EDE8D0;
-  --paper: #FDFAF2;
+  --bg: #FAF7EF;
+  --bg2: #F2EDD8;
+  --paper: #FEFCF5;
   --gold: #B8965A;
   --gold-light: #D4AF7A;
   --gold-dark: #8B6D3A;
   --text: #5C4A30;
   --text-light: #8B7355;
   --accent: #C4A882;
-  --cream: #F9F3E3;
-  --border: rgba(184,150,90,0.25);
-  --shadow: rgba(92,74,48,0.12);
+  --cream: #FBF7EC;
+  --border: rgba(184,150,90,0.22);
+  --shadow: rgba(92,74,48,0.10);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -48,8 +48,8 @@ body {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px;
-  background: linear-gradient(170deg, #EDE8D0 0%, #E8DFC8 40%, #DDD0B4 100%);
+  padding: 80px 24px 100px;
+  background: linear-gradient(170deg, #F5F0E2 0%, #EEE8D2 45%, #E6DCBF 100%);
   overflow: hidden;
 }
 
@@ -57,9 +57,22 @@ body {
   content: '';
   position: absolute;
   inset: 0;
+  /* Rings image centered, zoomed so rings sit behind/below the names */
+  background-image: url('images/anillos.png');
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center 62%;
+  opacity: 0.28;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /* Soft vignette so text stays readable */
   background:
-    radial-gradient(ellipse 60% 50% at 20% 30%, rgba(212,175,122,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 60% at 80% 70%, rgba(184,150,90,0.14) 0%, transparent 70%);
+    radial-gradient(ellipse 80% 50% at 50% 10%, rgba(245,240,226,0.75) 0%, transparent 70%),
+    radial-gradient(ellipse 100% 35% at 50% 100%, rgba(230,220,191,0.6) 0%, transparent 60%);
 }
 
 .hero-floral {
@@ -169,6 +182,32 @@ h1 {
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(22px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* ── SCROLL HINT ─────────────────────────────────────────── */
+.scroll-hint {
+  position: absolute;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--text);
+  opacity: 0.55;
+  font-size: 0.68rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: scrollBounce 2s ease-in-out infinite;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.scroll-hint.hidden { opacity: 0; }
+@keyframes scrollBounce {
+  0%, 100% { transform: translateX(-50%) translateY(0); }
+  50%       { transform: translateX(-50%) translateY(6px); }
 }
 
 /* ── WAVE SEPARATOR ──────────────────────────────────────── */

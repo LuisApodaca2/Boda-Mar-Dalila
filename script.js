@@ -56,6 +56,20 @@ btn.addEventListener('click', () => {
   }
 });
 
+// ── PAUSE ON BLUR ───────────────────────────────────────────
+document.addEventListener('visibilitychange', () => {
+  if (document.hidden && !audio.paused) {
+    audio.pause();
+    setPlaying(false);
+  }
+});
+
+// ── SCROLL HINT ─────────────────────────────────────────────
+const scrollHint = document.getElementById('scrollHint');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 40) scrollHint.classList.add('hidden');
+}, { passive: true });
+
 // ── SCROLL REVEAL ───────────────────────────────────────────
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry, i) => {
