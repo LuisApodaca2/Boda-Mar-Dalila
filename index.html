@@ -3,74 +3,254 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mar & Dalila</title>
+<title>Mar & Dalila — 01 Agosto 2026</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="floral floral-top">✦ ✿ ✦</div>
+<!-- Scroll progress bar -->
+<div class="progress-bar" id="progressBar"></div>
 
+<!-- Falling petals -->
+<div class="petals-container" id="petals"></div>
+
+<!-- ═══════ HERO ═══════ -->
 <section class="hero">
-  <p class="eyebrow">NUESTRO GRAN DÍA</p>
-  <div class="monogram">M ♥ D</div>
-  <h1>Mar & Dalila</h1>
-  <p class="date">01 de Agosto de 2026</p>
-  <p class="time">09:00 PM — 02:00 AM</p>
+
+  <!-- Floral corner SVGs -->
+  <svg class="hero-floral tl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.9">
+      <!-- Large rose -->
+      <circle cx="60" cy="60" r="28" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="60" cy="35" rx="12" ry="18" fill="#B8965A" opacity="0.5" transform="rotate(-15 60 35)"/>
+      <ellipse cx="80" cy="48" rx="12" ry="18" fill="#C4A882" opacity="0.5" transform="rotate(30 80 48)"/>
+      <ellipse cx="78" cy="72" rx="12" ry="16" fill="#B8965A" opacity="0.5" transform="rotate(80 78 72)"/>
+      <ellipse cx="55" cy="82" rx="11" ry="16" fill="#C4A882" opacity="0.5" transform="rotate(150 55 82)"/>
+      <ellipse cx="36" cy="68" rx="11" ry="16" fill="#B8965A" opacity="0.45" transform="rotate(210 36 68)"/>
+      <circle cx="60" cy="60" r="10" fill="#8B6D3A" opacity="0.35"/>
+      <!-- Smaller rose -->
+      <circle cx="120" cy="30" r="16" fill="#C4A882" opacity="0.25"/>
+      <ellipse cx="120" cy="16" rx="8" ry="12" fill="#B8965A" opacity="0.4" transform="rotate(-10 120 16)"/>
+      <ellipse cx="133" cy="24" rx="8" ry="12" fill="#C4A882" opacity="0.4" transform="rotate(40 133 24)"/>
+      <ellipse cx="132" cy="40" rx="7" ry="11" fill="#B8965A" opacity="0.4" transform="rotate(100 132 40)"/>
+      <ellipse cx="117" cy="44" rx="7" ry="11" fill="#C4A882" opacity="0.4" transform="rotate(160 117 44)"/>
+      <circle cx="120" cy="30" r="6" fill="#8B6D3A" opacity="0.3"/>
+      <!-- Leaves -->
+      <ellipse cx="30" cy="100" rx="8" ry="22" fill="#8B7355" opacity="0.35" transform="rotate(-30 30 100)"/>
+      <ellipse cx="100" cy="130" rx="7" ry="20" fill="#6B5A3E" opacity="0.3" transform="rotate(20 100 130)"/>
+      <ellipse cx="15" cy="145" rx="6" ry="18" fill="#8B7355" opacity="0.3" transform="rotate(-50 15 145)"/>
+      <!-- Stem lines -->
+      <path d="M60 88 Q40 110 20 140" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M88 60 Q110 50 130 20" stroke="#8B7355" stroke-width="1.2" fill="none" opacity="0.35"/>
+      <!-- Small buds -->
+      <circle cx="150" cy="70" r="8" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="150" cy="63" rx="5" ry="7" fill="#B8965A" opacity="0.4" transform="rotate(-10 150 63)"/>
+      <circle cx="150" cy="70" r="3" fill="#8B6D3A" opacity="0.3"/>
+      <!-- Dots -->
+      <circle cx="170" cy="20" r="3" fill="#B8965A" opacity="0.4"/>
+      <circle cx="185" cy="40" r="2" fill="#C4A882" opacity="0.3"/>
+      <circle cx="20" cy="170" r="2.5" fill="#B8965A" opacity="0.35"/>
+    </g>
+  </svg>
+
+  <svg class="hero-floral tr" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.9">
+      <circle cx="60" cy="60" r="28" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="60" cy="35" rx="12" ry="18" fill="#B8965A" opacity="0.5" transform="rotate(-15 60 35)"/>
+      <ellipse cx="80" cy="48" rx="12" ry="18" fill="#C4A882" opacity="0.5" transform="rotate(30 80 48)"/>
+      <ellipse cx="78" cy="72" rx="12" ry="16" fill="#B8965A" opacity="0.5" transform="rotate(80 78 72)"/>
+      <ellipse cx="55" cy="82" rx="11" ry="16" fill="#C4A882" opacity="0.5" transform="rotate(150 55 82)"/>
+      <ellipse cx="36" cy="68" rx="11" ry="16" fill="#B8965A" opacity="0.45" transform="rotate(210 36 68)"/>
+      <circle cx="60" cy="60" r="10" fill="#8B6D3A" opacity="0.35"/>
+      <circle cx="120" cy="30" r="16" fill="#C4A882" opacity="0.25"/>
+      <ellipse cx="120" cy="16" rx="8" ry="12" fill="#B8965A" opacity="0.4" transform="rotate(-10 120 16)"/>
+      <ellipse cx="133" cy="24" rx="8" ry="12" fill="#C4A882" opacity="0.4" transform="rotate(40 133 24)"/>
+      <ellipse cx="132" cy="40" rx="7" ry="11" fill="#B8965A" opacity="0.4" transform="rotate(100 132 40)"/>
+      <ellipse cx="117" cy="44" rx="7" ry="11" fill="#C4A882" opacity="0.4" transform="rotate(160 117 44)"/>
+      <circle cx="120" cy="30" r="6" fill="#8B6D3A" opacity="0.3"/>
+      <ellipse cx="30" cy="100" rx="8" ry="22" fill="#8B7355" opacity="0.35" transform="rotate(-30 30 100)"/>
+      <ellipse cx="100" cy="130" rx="7" ry="20" fill="#6B5A3E" opacity="0.3" transform="rotate(20 100 130)"/>
+      <ellipse cx="15" cy="145" rx="6" ry="18" fill="#8B7355" opacity="0.3" transform="rotate(-50 15 145)"/>
+      <path d="M60 88 Q40 110 20 140" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <path d="M88 60 Q110 50 130 20" stroke="#8B7355" stroke-width="1.2" fill="none" opacity="0.35"/>
+      <circle cx="150" cy="70" r="8" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="150" cy="63" rx="5" ry="7" fill="#B8965A" opacity="0.4" transform="rotate(-10 150 63)"/>
+      <circle cx="150" cy="70" r="3" fill="#8B6D3A" opacity="0.3"/>
+      <circle cx="170" cy="20" r="3" fill="#B8965A" opacity="0.4"/>
+      <circle cx="185" cy="40" r="2" fill="#C4A882" opacity="0.3"/>
+      <circle cx="20" cy="170" r="2.5" fill="#B8965A" opacity="0.35"/>
+    </g>
+  </svg>
+
+  <svg class="hero-floral bl" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.9">
+      <circle cx="60" cy="60" r="28" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="60" cy="35" rx="12" ry="18" fill="#B8965A" opacity="0.5" transform="rotate(-15 60 35)"/>
+      <ellipse cx="80" cy="48" rx="12" ry="18" fill="#C4A882" opacity="0.5" transform="rotate(30 80 48)"/>
+      <ellipse cx="78" cy="72" rx="12" ry="16" fill="#B8965A" opacity="0.5" transform="rotate(80 78 72)"/>
+      <ellipse cx="55" cy="82" rx="11" ry="16" fill="#C4A882" opacity="0.5" transform="rotate(150 55 82)"/>
+      <ellipse cx="36" cy="68" rx="11" ry="16" fill="#B8965A" opacity="0.45" transform="rotate(210 36 68)"/>
+      <circle cx="60" cy="60" r="10" fill="#8B6D3A" opacity="0.35"/>
+      <circle cx="120" cy="30" r="16" fill="#C4A882" opacity="0.25"/>
+      <ellipse cx="120" cy="16" rx="8" ry="12" fill="#B8965A" opacity="0.4"/>
+      <ellipse cx="133" cy="24" rx="8" ry="12" fill="#C4A882" opacity="0.4" transform="rotate(40 133 24)"/>
+      <ellipse cx="132" cy="40" rx="7" ry="11" fill="#B8965A" opacity="0.4" transform="rotate(100 132 40)"/>
+      <ellipse cx="117" cy="44" rx="7" ry="11" fill="#C4A882" opacity="0.4" transform="rotate(160 117 44)"/>
+      <circle cx="120" cy="30" r="6" fill="#8B6D3A" opacity="0.3"/>
+      <ellipse cx="30" cy="100" rx="8" ry="22" fill="#8B7355" opacity="0.35" transform="rotate(-30 30 100)"/>
+      <ellipse cx="100" cy="130" rx="7" ry="20" fill="#6B5A3E" opacity="0.3" transform="rotate(20 100 130)"/>
+      <path d="M60 88 Q40 110 20 140" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <circle cx="170" cy="20" r="3" fill="#B8965A" opacity="0.4"/>
+    </g>
+  </svg>
+
+  <svg class="hero-floral br" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g opacity="0.9">
+      <circle cx="60" cy="60" r="28" fill="#C4A882" opacity="0.3"/>
+      <ellipse cx="60" cy="35" rx="12" ry="18" fill="#B8965A" opacity="0.5" transform="rotate(-15 60 35)"/>
+      <ellipse cx="80" cy="48" rx="12" ry="18" fill="#C4A882" opacity="0.5" transform="rotate(30 80 48)"/>
+      <ellipse cx="78" cy="72" rx="12" ry="16" fill="#B8965A" opacity="0.5" transform="rotate(80 78 72)"/>
+      <ellipse cx="55" cy="82" rx="11" ry="16" fill="#C4A882" opacity="0.5" transform="rotate(150 55 82)"/>
+      <ellipse cx="36" cy="68" rx="11" ry="16" fill="#B8965A" opacity="0.45" transform="rotate(210 36 68)"/>
+      <circle cx="60" cy="60" r="10" fill="#8B6D3A" opacity="0.35"/>
+      <ellipse cx="30" cy="100" rx="8" ry="22" fill="#8B7355" opacity="0.35" transform="rotate(-30 30 100)"/>
+      <ellipse cx="100" cy="130" rx="7" ry="20" fill="#6B5A3E" opacity="0.3" transform="rotate(20 100 130)"/>
+      <path d="M60 88 Q40 110 20 140" stroke="#8B7355" stroke-width="1.5" fill="none" opacity="0.4"/>
+      <circle cx="185" cy="40" r="2" fill="#C4A882" opacity="0.3"/>
+    </g>
+  </svg>
+
+  <div class="hero-inner">
+    <p class="eyebrow">Nuestro Gran Día</p>
+    <div class="hero-divider"><span>✦</span></div>
+    <h1>Mar &amp; Dalila</h1>
+    <div class="date-badge">
+      <span class="date">📅&nbsp; 01 de Agosto de 2026</span>
+      <span class="time">🕘&nbsp; 09:00 PM — 02:00 AM</span>
+    </div>
+  </div>
 </section>
 
-<section class="quote card">
-<p>“No llegó como lo imaginé, llegó mejor: siendo ella. Entre sus manos encontré refugio, en su mirada descubrí complicidad y en su amor hallé todo aquello que, durante tanto tiempo, había esperado sin saber que tendría su nombre.”</p>
-</section>
+<!-- Wave transition -->
+<svg class="wave" viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#FDFAF2"/>
+</svg>
 
-<section class="card">
-<h2>Cuenta Regresiva</h2>
-<div class="countdown">
-<div><span id="days">0</span><small>Días</small></div>
-<div><span id="hours">0</span><small>Horas</small></div>
-<div><span id="minutes">0</span><small>Minutos</small></div>
-<div><span id="seconds">0</span><small>Segundos</small></div>
+<div class="content-flow">
+
+  <!-- Quote -->
+  <article class="card quote">
+    <blockquote>
+      No llegó como lo imaginé, llegó mejor: siendo ella. Entre sus manos encontré refugio, en su mirada descubrí complicidad y en su amor hallé todo aquello que, durante tanto tiempo, había esperado sin saber que tendría su nombre.
+    </blockquote>
+  </article>
+
+  <!-- Countdown -->
+  <article class="card">
+    <div class="countdown-wrap">
+      <p class="countdown-label">Faltan</p>
+      <div class="ornament-line">✦ ♥ ✦</div>
+      <div class="countdown">
+        <div class="countdown-item"><span id="days">0</span><small>Días</small></div>
+        <div class="countdown-item"><span id="hours">0</span><small>Horas</small></div>
+        <div class="countdown-item"><span id="minutes">0</span><small>Minutos</small></div>
+        <div class="countdown-item"><span id="seconds">0</span><small>Segundos</small></div>
+      </div>
+      <p class="countdown-sub"><span>♥</span> para nuestro gran día</p>
+    </div>
+  </article>
+
+  <!-- Song -->
+  <article class="card song-card">
+    <span class="section-label">🎵 Nuestra Canción</span>
+    <h2>La música que nos une</h2>
+    <div class="song-player">
+      <div class="song-disc" id="disc"></div>
+      <div class="song-info">
+        <span class="song-title">Contigo Quiero</span>
+        <span class="song-artist">Reyli Barba</span>
+      </div>
+    </div>
+    <a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=Contigo+Quiero+Reyli+Barba" onclick="document.getElementById('disc').classList.add('playing')">
+      ▶ &nbsp;Escuchar canción
+    </a>
+  </article>
+
+  <!-- Location -->
+  <article class="card">
+    <span class="section-label">📍 Ubicación</span>
+    <div class="location-info">
+      <p class="location-name">Quinta San Agustín</p>
+      <p class="location-addr">Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
+    </div>
+    <div class="map-preview">🗺&nbsp; Quinta San Agustín</div>
+    <a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">
+      🗺&nbsp; Cómo llegar
+    </a>
+  </article>
+
+  <!-- Dress code -->
+  <article class="card dresscode">
+    <span class="section-label">👗 Código de Vestimenta</span>
+    <span class="dresscode-type">Formal</span>
+    <div class="color-avoid">
+      <p>Por favor evitar los colores:</p>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#F5F0E4;"></div>
+        <span>Perla</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#FFFFFF;"></div>
+        <span>Blanco</span>
+      </div>
+      <div class="color-swatch">
+        <div class="swatch" style="background:#C0392B;"></div>
+        <span>Rojo</span>
+      </div>
+    </div>
+  </article>
+
+  <!-- RSVP -->
+  <article class="card rsvp">
+    <span class="section-label">♥ Confirmación de Asistencia</span>
+    <h2>¿Nos acompañas?</h2>
+    <p>Con mucha alegría queremos compartir con ustedes uno de los momentos más importantes de nuestras vidas. Esperamos contar con su presencia para celebrar este día tan especial.</p>
+    <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">
+      Confirmar asistencia
+    </a>
+  </article>
+
+  <!-- Photos -->
+  <article class="card photo-section">
+    <span class="section-label">📸 Comparte tus Fotografías</span>
+    <h2>Recuerdos del día</h2>
+    <div class="qr-placeholder">
+      <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+        <rect x="14" y="14" width="3" height="3"/><rect x="19" y="14" width="2" height="2"/><rect x="19" y="18" width="2" height="3"/>
+        <rect x="14" y="19" width="3" height="2"/>
+      </svg>
+      <span>QR próximamente</span>
+    </div>
+    <p style="font-size:0.85rem;color:var(--text-light);">Pronto compartiremos el código QR para subir fotografías del evento.</p>
+  </article>
+
+  <!-- Notice -->
+  <article class="card notice">
+    <span class="section-label">⚠ Importante</span>
+    <p>Este evento es para disfrutarlo entre personas adultas. Como habrá alcohol de por medio, se pide no llevar menores de edad.</p>
+  </article>
+
 </div>
-</section>
 
-<section class="card">
-<h2>🎵 Nuestra Canción</h2>
-<a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=Contigo+Quiero+Reyli+Barba">Contigo Quiero — Reyli Barba</a>
-</section>
-
-<section class="card">
-<h2>📍 Ubicación</h2>
-<p>Quinta San Agustín<br>Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
-<a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">Cómo llegar</a>
-</section>
-
-<section class="card">
-<h2>Código de Vestimenta</h2>
-<p class="strong">Formal</p>
-<p>Evitar los colores: Perla, Blanco y Rojo</p>
-</section>
-
-<section class="card">
-<h2>Confirmación de Asistencia</h2>
-<a class="btn btn-main" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">Confirmar asistencia</a>
-</section>
-
-<section class="card">
-<h2>📸 Comparte tus Fotografías</h2>
-<img class="qr" src="images/qr-placeholder.png">
-<p>Próximamente compartiremos el código QR para subir fotografías del evento.</p>
-</section>
-
-<section class="card notice">
-<h2>Importante</h2>
-<p>Este evento es para disfrutarlo entre personas adultas, y como habrá alcohol de por medio, se pide no llevar menores de edad.</p>
-</section>
-
+<!-- Footer -->
 <footer>
-<p>Gracias por acompañarnos en este momento tan especial.</p>
-<h3>Mar & Dalila</h3>
+  <span class="footer-thanks">Gracias por acompañarnos en este momento tan especial</span>
+  <span class="footer-names">Mar &amp; Dalila</span>
+  <span class="footer-heart">♥</span>
 </footer>
 
 <script src="script.js"></script>
