@@ -1,11 +1,10 @@
 
-const target = new Date("2026-08-01T21:00:00");
+const target=new Date('2026-08-01T21:00:00');
 setInterval(()=>{
- const now = new Date();
- const diff = target-now;
- const d=Math.floor(diff/86400000);
- const h=Math.floor((diff%86400000)/3600000);
- const m=Math.floor((diff%3600000)/60000);
- const s=Math.floor((diff%60000)/1000);
- document.getElementById("countdown").textContent=`${d} días ${h} horas ${m} minutos ${s} segundos`;
+let d=target-new Date();
+if(d<0)d=0;
+document.getElementById('days').textContent=Math.floor(d/86400000);
+document.getElementById('hours').textContent=Math.floor(d%86400000/3600000);
+document.getElementById('minutes').textContent=Math.floor(d%3600000/60000);
+document.getElementById('seconds').textContent=Math.floor(d%60000/1000);
 },1000);

@@ -1,10 +1,49 @@
 
-body{margin:0;font-family:Georgia,serif;background:#f5efe6;color:#5a4a42;text-align:center}
-.hero{height:70vh;background:linear-gradient(rgba(245,239,230,.7),rgba(245,239,230,.7)),url('images/hero-pattern.jpg');background-size:cover;display:flex;align-items:center;justify-content:center}
-h1{font-size:3rem;margin:.2em}
-h2{color:#a88a5a}
-section{padding:40px 20px;max-width:800px;margin:auto}
-blockquote{font-style:italic;font-size:1.2rem;line-height:1.8}
-.btn{display:inline-block;background:#c5a572;color:white;padding:12px 24px;border-radius:30px;text-decoration:none}
-#countdown{font-size:2rem;font-weight:bold}
-footer{padding:40px}
+:root{
+--bg:#f5efe6;
+--card:#fffaf4;
+--gold:#b8995f;
+--text:#5b4b43;
+}
+*{box-sizing:border-box}
+body{
+margin:0;background:linear-gradient(#f5efe6,#efe4d3);
+font-family:Montserrat,sans-serif;color:var(--text);
+}
+.hero{
+min-height:90vh;display:flex;align-items:center;justify-content:center;
+text-align:center;padding:30px;
+background:
+radial-gradient(circle at top left,rgba(184,153,95,.15),transparent 35%),
+radial-gradient(circle at bottom right,rgba(184,153,95,.15),transparent 35%);
+}
+.hero-inner{max-width:700px}
+.monogram{font-size:2rem;color:var(--gold)}
+.small{letter-spacing:4px}
+h1{font-family:'Playfair Display',serif;font-size:4rem;margin:.2em 0;color:#7a6340}
+.date{font-size:1.2rem}
+.card{
+background:var(--card);
+margin:25px auto;
+padding:30px;
+width:min(92%,850px);
+border-radius:22px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+text-align:center;
+}
+h2{font-family:'Playfair Display',serif;color:#7a6340}
+.quote p{font-style:italic;line-height:1.9}
+.countdown{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.countdown div{
+background:#f1e6d6;padding:15px;border-radius:16px;min-width:90px
+}
+.countdown span{display:block;font-size:2rem;font-weight:600}
+.btn{
+display:inline-block;background:var(--gold);color:white;
+padding:14px 28px;border-radius:999px;text-decoration:none;
+}
+.qr{max-width:220px;width:100%}
+footer{text-align:center;padding:50px 20px}
+@media(max-width:600px){
+h1{font-size:3rem}
+}

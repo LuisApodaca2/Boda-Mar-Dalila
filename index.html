@@ -4,68 +4,71 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Mar & Dalila</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <div class="overlay">
-    <h2>NUESTRO GRAN DÍA</h2>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="monogram">M ♥ D</div>
+    <p class="small">NUESTRO GRAN DÍA</p>
     <h1>Mar & Dalila</h1>
     <p class="date">01 de Agosto de 2026</p>
-    <p>09:00 PM – 02:00 AM</p>
+    <p>09:00 PM — 02:00 AM</p>
   </div>
-</header>
-
-<section>
-  <blockquote>
-    No llegó como lo imaginé, llegó mejor: siendo ella. Entre sus manos encontré refugio,
-    en su mirada descubrí complicidad y en su amor hallé todo aquello que, durante tanto tiempo,
-    había esperado sin saber que tendría su nombre.
-  </blockquote>
 </section>
 
-<section>
-  <h2>Cuenta Regresiva</h2>
-  <div id="countdown"></div>
+<section class="card quote">
+<p>No llegó como lo imaginé, llegó mejor: siendo ella. Entre sus manos encontré refugio, en su mirada descubrí complicidad y en su amor hallé todo aquello que, durante tanto tiempo, había esperado sin saber que tendría su nombre.</p>
 </section>
 
-<section>
-  <h2>🎵 Nuestra Canción</h2>
-  <a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=Contigo+Quiero+Reyli+Barba">Escuchar en YouTube</a>
+<section class="card">
+<h2>Cuenta Regresiva</h2>
+<div id="countdown" class="countdown">
+<div><span id="days">0</span><small>Días</small></div>
+<div><span id="hours">0</span><small>Horas</small></div>
+<div><span id="minutes">0</span><small>Minutos</small></div>
+<div><span id="seconds">0</span><small>Segundos</small></div>
+</div>
 </section>
 
-<section>
-  <h2>📍 Ubicación</h2>
-  <p>Quinta San Agustín<br>Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
-  <a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">Ver ubicación</a>
+<section class="card">
+<h2>🎵 Nuestra Canción</h2>
+<a class="btn" target="_blank" href="https://www.youtube.com/results?search_query=Contigo+Quiero+Reyli+Barba">Contigo Quiero - Reyli Barba</a>
 </section>
 
-<section>
-  <h2>Código de Vestimenta</h2>
-  <p><strong>Formal</strong></p>
-  <p>Evitar los colores: Perla, Blanco y Rojo.</p>
+<section class="card">
+<h2>📍 Ubicación</h2>
+<p>Quinta San Agustín<br>Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
+<a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">Ver ubicación</a>
 </section>
 
-<section>
-  <h2>Confirmación de Asistencia</h2>
-  <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">Confirmar asistencia</a>
+<section class="card">
+<h2>Código de Vestimenta</h2>
+<p><strong>Formal</strong></p>
+<p>Evitar los colores: Perla, Blanco y Rojo.</p>
 </section>
 
-<section>
-  <h2>📸 Comparte tus Fotografías</h2>
-  <img src="images/qr-placeholder.png" alt="QR Placeholder" width="220">
-  <p>QR pendiente de configurar.</p>
+<section class="card">
+<h2>Confirmación de Asistencia</h2>
+<a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">Confirmar asistencia</a>
 </section>
 
-<section>
-  <h2>Importante</h2>
-  <p>Este evento es para disfrutarlo entre personas adultas, y como habrá alcohol de por medio, se pide no llevar menores de edad.</p>
+<section class="card">
+<h2>📸 Comparte tus Fotografías</h2>
+<img src="images/qr-placeholder.png" class="qr">
+<p>Próximamente disponible.</p>
 </section>
 
-<footer>
-  <p>Gracias por acompañarnos.</p>
-  <p>Mar & Dalila</p>
-</footer>
+<section class="card adults">
+<h2>Importante</h2>
+<p>Este evento es para disfrutarlo entre personas adultas, y como habrá alcohol de por medio, se pide no llevar menores de edad.</p>
+</section>
+
+<footer>Gracias por acompañarnos<br><strong>Mar & Dalila</strong></footer>
 
 <script src="script.js"></script>
 </body>
