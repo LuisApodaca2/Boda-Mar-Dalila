@@ -45,10 +45,15 @@ function startAudio() {
   });
 }
 
-// Trigger on first user interaction
-['touchstart', 'click', 'scroll', 'keydown'].forEach(evt =>
+// Trigger on first touch or click
+['touchstart', 'click', 'keydown'].forEach(evt =>
   document.addEventListener(evt, startAudio, { once: true, passive: true })
 );
+
+// Also trigger when user has scrolled (iOS: scroll = user already touched)
+window.addEventListener('scroll', () => {
+  if (!started && window.scrollY > 10) startAudio();
+}, { passive: true });
 
 // Manual toggle
 btn.addEventListener('click', (e) => {
