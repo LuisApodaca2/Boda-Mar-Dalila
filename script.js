@@ -28,7 +28,6 @@ function setPlaying(playing) {
 }
 
 btn.addEventListener('click', () => {
-  // Hide tooltip permanently on first interaction
   tooltip.classList.add('hidden');
 
   if (!started) {
@@ -36,7 +35,6 @@ btn.addEventListener('click', () => {
     audio.play().then(() => {
       started = true;
       setPlaying(true);
-      // Fade in
       let v = 0;
       const fade = setInterval(() => {
         v = Math.min(v + 0.04, 0.75);
@@ -91,7 +89,7 @@ window.addEventListener('scroll', () => {
   progressBar.style.width = (docHeight > 0 ? (scrollTop / docHeight) * 100 : 0) + '%';
 }, { passive: true });
 
-// ── FALLING PETALS ──────────────────────────────────────────
+// ── FALLING PETALS (dorados — toda la página) ───────────────
 function createPetal() {
   const container = document.getElementById('petals');
   const petal = document.createElement('div');
@@ -111,3 +109,31 @@ function createPetal() {
 }
 setInterval(createPetal, 1400);
 for (let i = 0; i < 5; i++) setTimeout(createPetal, i * 600);
+
+// ── HERO WHITE PETALS (solo en el hero) ─────────────────────
+function createHeroPetal() {
+  const hero = document.querySelector('.hero');
+  if (!hero) return;
+
+  // Solo crear si el hero es visible en pantalla
+  const heroBottom = hero.getBoundingClientRect().bottom;
+  if (heroBottom < 0) return;
+
+  const petal = document.createElement('div');
+  petal.className = 'petal-hero';
+  const shapes = [
+    `<svg width="14" height="18" viewBox="0 0 14 18" fill="none"><ellipse cx="7" cy="9" rx="6" ry="8" fill="white" opacity="0.55" transform="rotate(-20 7 9)"/></svg>`,
+    `<svg width="10" height="14" viewBox="0 0 10 14" fill="none"><ellipse cx="5" cy="7" rx="4" ry="6" fill="white" opacity="0.45" transform="rotate(25 5 7)"/></svg>`,
+    `<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><ellipse cx="6" cy="6" rx="5" ry="4" fill="white" opacity="0.4" transform="rotate(-10 6 6)"/></svg>`,
+    `<svg width="8" height="12" viewBox="0 0 8 12" fill="none"><ellipse cx="4" cy="6" rx="3" ry="5" fill="white" opacity="0.5" transform="rotate(10 4 6)"/></svg>`,
+    `<svg width="16" height="10" viewBox="0 0 16 10" fill="none"><ellipse cx="8" cy="5" rx="7" ry="4" fill="white" opacity="0.38" transform="rotate(-15 8 5)"/></svg>`,
+  ];
+  petal.innerHTML = shapes[Math.floor(Math.random() * shapes.length)];
+  petal.style.left = Math.random() * 100 + 'vw';
+  petal.style.animationDuration = (5 + Math.random() * 7) + 's';
+  petal.style.animationDelay = (Math.random() * 2) + 's';
+  hero.appendChild(petal);
+  petal.addEventListener('animationend', () => petal.remove());
+}
+setInterval(createHeroPetal, 1000);
+for (let i = 0; i < 8; i++) setTimeout(createHeroPetal, i * 400);
