@@ -1,0 +1,10 @@
+
+body{margin:0;font-family:Georgia,serif;background:#f5efe6;color:#5a4a42;text-align:center}
+.hero{height:70vh;background:linear-gradient(rgba(245,239,230,.7),rgba(245,239,230,.7)),url('images/hero-pattern.jpg');background-size:cover;display:flex;align-items:center;justify-content:center}
+h1{font-size:3rem;margin:.2em}
+h2{color:#a88a5a}
+section{padding:40px 20px;max-width:800px;margin:auto}
+blockquote{font-style:italic;font-size:1.2rem;line-height:1.8}
+.btn{display:inline-block;background:#c5a572;color:white;padding:12px 24px;border-radius:30px;text-decoration:none}
+#countdown{font-size:2rem;font-weight:bold}
+footer{padding:40px}
