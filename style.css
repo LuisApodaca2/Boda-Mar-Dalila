@@ -34,8 +34,8 @@ body {
   transform: translateX(-50%);
   /* top% + margin fine-tunes vertical alignment:
      rings SVG center (y=170/340 = 50%) should align with the h1 title */
-  top: calc(50% - 80px);
-  width: min(88vw, 440px);
+  top: calc(50% - 280px);
+  width: min(88vw, 480px);
   opacity: 0.28;
   mix-blend-mode: multiply;
   pointer-events: none;
@@ -46,13 +46,13 @@ body {
 @media (max-width: 480px) {
   .hero-rings {
     width: 95vw;
-    top: calc(50% - 70px);
+    top: calc(50% - 100px);
   }
 }
 @media (max-width: 390px) {
   .hero-rings {
     width: 98vw;
-    top: calc(50% - 60px);
+    top: calc(50% - 90px);
   }
 }
 
