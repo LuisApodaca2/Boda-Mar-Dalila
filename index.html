@@ -218,7 +218,84 @@
     </g>
   </svg>
 
-  <div class="hero-inner">
+  
+<!-- Wedding rings inline SVG — centered behind names -->
+<svg class="hero-rings" viewBox="0 0 500 340" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="rg-goldL" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="18%"  stop-color="#D4AF7A"/>
+      <stop offset="38%"  stop-color="#8B6D3A"/>
+      <stop offset="55%"  stop-color="#C4A060"/>
+      <stop offset="72%"  stop-color="#E8C97A"/>
+      <stop offset="85%"  stop-color="#9A7840"/>
+      <stop offset="100%" stop-color="#B8965A"/>
+    </linearGradient>
+    <linearGradient id="rg-goldR" x1="100%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%"   stop-color="#F5E6A3"/>
+      <stop offset="20%"  stop-color="#D4AF7A"/>
+      <stop offset="40%"  stop-color="#8B6D3A"/>
+      <stop offset="58%"  stop-color="#C4A060"/>
+      <stop offset="75%"  stop-color="#E8C97A"/>
+      <stop offset="90%"  stop-color="#9A7840"/>
+      <stop offset="100%" stop-color="#B8965A"/>
+    </linearGradient>
+    <radialGradient id="rg-shineL" cx="32%" cy="25%" r="50%">
+      <stop offset="0%"   stop-color="#FFFDE0" stop-opacity="0.95"/>
+      <stop offset="40%"  stop-color="#F5E6A3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#B8965A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rg-shineR" cx="68%" cy="25%" r="50%">
+      <stop offset="0%"   stop-color="#FFFDE0" stop-opacity="0.95"/>
+      <stop offset="40%"  stop-color="#F5E6A3" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#B8965A" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="rg-innerL" cx="50%" cy="50%" r="50%">
+      <stop offset="55%" stop-color="#F5F0E2" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#7A5520" stop-opacity="0.3"/>
+    </radialGradient>
+    <radialGradient id="rg-innerR" cx="50%" cy="50%" r="50%">
+      <stop offset="55%" stop-color="#F5F0E2" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#7A5520" stop-opacity="0.28"/>
+    </radialGradient>
+    <filter id="rg-shadowL" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="5" dy="10" stdDeviation="12" flood-color="#5C3A10" flood-opacity="0.5"/>
+    </filter>
+    <filter id="rg-shadowR" x="-25%" y="-25%" width="150%" height="160%">
+      <feDropShadow dx="-3" dy="10" stdDeviation="12" flood-color="#5C3A10" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- LEFT RING -->
+  <g filter="url(#rg-shadowL)">
+    <circle cx="178" cy="170" r="98" stroke="url(#rg-goldL)"  stroke-width="36" fill="none"/>
+    <circle cx="178" cy="170" r="98" stroke="#7A5520"         stroke-width="36" fill="none" opacity="0.16"/>
+    <circle cx="178" cy="170" r="98" stroke="#E8C97A"         stroke-width="2.5" fill="none" opacity="0.6"/>
+    <circle cx="178" cy="170" r="80" stroke="#9A7840"         stroke-width="1.5" fill="none" opacity="0.4"/>
+    <circle cx="178" cy="170" r="98" stroke="url(#rg-shineL)" stroke-width="36" fill="none" opacity="0.85"/>
+    <!-- Specular highlight arc top-left -->
+    <path d="M 116,104 Q 143,68 192,84" stroke="#FFFCE8" stroke-width="9"  stroke-linecap="round" fill="none" opacity="0.9"/>
+    <path d="M 122,112 Q 147,80 188,94" stroke="white"   stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.55"/>
+    <!-- Hole depth -->
+    <circle cx="178" cy="170" r="79" fill="url(#rg-innerL)" opacity="0.65"/>
+  </g>
+
+  <!-- RIGHT RING -->
+  <g filter="url(#rg-shadowR)">
+    <circle cx="322" cy="170" r="98" stroke="url(#rg-goldR)"  stroke-width="36" fill="none"/>
+    <circle cx="322" cy="170" r="98" stroke="#7A5520"         stroke-width="36" fill="none" opacity="0.16"/>
+    <circle cx="322" cy="170" r="98" stroke="#E8C97A"         stroke-width="2.5" fill="none" opacity="0.6"/>
+    <circle cx="322" cy="170" r="80" stroke="#9A7840"         stroke-width="1.5" fill="none" opacity="0.4"/>
+    <circle cx="322" cy="170" r="98" stroke="url(#rg-shineR)" stroke-width="36" fill="none" opacity="0.85"/>
+    <path d="M 260,104 Q 287,68 336,84" stroke="#FFFCE8" stroke-width="9"  stroke-linecap="round" fill="none" opacity="0.9"/>
+    <path d="M 266,112 Q 291,80 332,94" stroke="white"   stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.55"/>
+    <circle cx="322" cy="170" r="79" fill="url(#rg-innerR)" opacity="0.65"/>
+  </g>
+
+  <!-- Ground shadow -->
+  <ellipse cx="250" cy="298" rx="145" ry="16" fill="#8B6D3A" opacity="0.1"/>
+</svg>
+<div class="hero-inner">
     <p class="eyebrow">Nuestro Gran Día</p>
     <div class="hero-divider"><span>✦</span></div>
     <h1>Mar &amp; Dalila</h1>
