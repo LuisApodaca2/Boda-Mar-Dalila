@@ -52,7 +52,7 @@ body {
 @media (max-width: 390px) {
   .hero-rings {
     width: 98vw;
-    top: calc(50% - 190px);
+    top: calc(50% - 200px);
   }
 }
 
