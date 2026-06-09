@@ -277,7 +277,27 @@
     <path d="M 116,104 Q 143,68 192,84" stroke="#FFFCE8" stroke-width="9"  stroke-linecap="round" fill="none" opacity="0.9"/>
     <path d="M 122,112 Q 147,80 188,94" stroke="white"   stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.55"/>
     <!-- Hole depth -->
-    <circle cx="178" cy="170" r="79" fill="url(#rg-innerL)" opacity="0.65"/>
+    <circle cx="178" cy="170" r="79" fill="url(#rg-innerL)" opacity="0.75"/>
+    <!-- Diamond at ~45° upper-left on ring, rotated to follow ring surface -->
+    <g transform="translate(110, 90) rotate(-45)">
+      <!-- Shadow under diamond -->
+      <ellipse cx="0" cy="1" rx="13" ry="4" fill="#5C3A10" opacity="0.50"/>
+      <!-- Girdle (widest part) -->
+      <polygon points="0,-18 14,0 0,4 -14,0" fill="#E8F4FF" opacity="0.95"/>
+      <!-- Crown facets (top) -->
+      <polygon points="0,-18 14,0 4,-8"   fill="white"   opacity="0.95"/>
+      <polygon points="0,-18 -14,0 -4,-8" fill="#C8E0F8" opacity="0.85"/>
+      <polygon points="4,-8  14,0 0,0"    fill="#D8ECFF" opacity="0.8"/>
+      <polygon points="-4,-8 -14,0 0,0"   fill="white"   opacity="0.7"/>
+      <polygon points="-4,-8 4,-8 0,0"    fill="#EEF6FF" opacity="0.9"/>
+      <!-- Table (flat top face) -->
+      <polygon points="0,-18 4,-8 -4,-8"  fill="white"   opacity="1"/>
+      <!-- Outline edges -->
+      <polygon points="0,-18 14,0 0,4 -14,0" fill="none" stroke="#A0C4E8" stroke-width="0.5" opacity="0.6"/>
+      <!-- Specular flash -->
+      <polygon points="0,-18 4,-8 -4,-8" fill="white" opacity="0.9"/>
+      <circle cx="-3" cy="-12" r="2.5" fill="white" opacity="0.8"/>
+    </g>
   </g>
 
   <!-- RIGHT RING -->
@@ -338,17 +358,20 @@
       <p class="countdown-sub">para nuestro gran día</p>
     </div>
   </article>
-  
-  <!-- RSVP -->
-  <article class="card rsvp">
-    <span class="section-label">Confirmación de Asistencia</span>
-    <h2>¿Nos acompañas?</h2>
-    <p>Con mucha alegría queremos compartir con ustedes uno de los momentos más importantes de nuestras vidas. Esperamos contar con su presencia para celebrar este día tan especial.</p>
-    <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">
-      Confirmar asistencia
+
+  <!-- Location -->
+  <article class="card location-card">
+    <span class="section-label">Ubicación</span>
+    <div class="location-info">
+      <p class="location-name">Quinta San Agustín</p>
+      <p class="location-addr">Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
+    </div>
+    <img src="images/map-chihuahua.png" alt="Mapa Quinta San Agustín, Chihuahua" class="map-img">
+    <a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">
+      Cómo llegar
     </a>
   </article>
-  
+
   <!-- Dress code -->
   <article class="card dresscode">
     <span class="section-label">Código de Vestimenta</span>
@@ -370,16 +393,13 @@
     </div>
   </article>
 
-  <!-- Location -->
-  <article class="card location-card">
-    <span class="section-label">Ubicación</span>
-    <div class="location-info">
-      <p class="location-name">Quinta San Agustín</p>
-      <p class="location-addr">Carretera Ojinaga–Chihuahua<br>31313 Chihuahua, Chihuahua, México</p>
-    </div>
-    <img src="images/map-chihuahua.png" alt="Mapa Quinta San Agustín, Chihuahua" class="map-img">
-    <a class="btn" target="_blank" href="https://maps.google.com/?q=Quinta+San+Agustin+Chihuahua">
-      Cómo llegar
+  <!-- RSVP -->
+  <article class="card rsvp">
+    <span class="section-label">Confirmación de Asistencia</span>
+    <h2>¿Nos acompañas?</h2>
+    <p>Con mucha alegría queremos compartir con ustedes uno de los momentos más importantes de nuestras vidas. Esperamos contar con su presencia para celebrar este día tan especial.</p>
+    <a class="btn" target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLSeLzrh8yT0Vvkxyzu6QxGdHYko6G-euqgQAsoO-NbPq3ArZyw/viewform?usp=publish-editor">
+      Confirmar asistencia
     </a>
   </article>
 
